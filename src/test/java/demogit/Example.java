@@ -1,7 +1,13 @@
 package demogit;
 
-public class Example {
-public static void main(String[] args) {
+import org.testng.annotations.Test;
+
+public class Example 
+{
+	
+@Test
+public  void xyz() {
+	
 	System.out.println(10+10);
 	System.out.println("asmita");
 }
