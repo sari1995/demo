@@ -17,8 +17,10 @@ public class Website
 @Test
 public  void xyz() {
 	
-	WebDriverManager.edgedriver().setup();
-	WebDriver web = new EdgeDriver();
+	
+	System.setProperty("webdriver.http.factory", "jdk-http-client");
+	WebDriverManager.chromedriver().setup();
+	WebDriver web = new ChromeDriver();
 	web.manage().window().maximize();
 	web.get("https://www.google.com/");
 	web.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
